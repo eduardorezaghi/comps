@@ -4,15 +4,17 @@ import className from 'classnames';
 
 export default function Button({
     children,
+    onClick,
     primary,
     secondary,
     success,
     warning,
     danger,
     outline,
-    rounded
+    rounded,
+    ...rest
 }) {
-    const classes = className('px-3 py-1.5 border', {
+    const classes = className(rest.className, ' flex items-center justify-center px-3 py-1.5 border', {
         'border-blue-500 bg-blue-500 text-white': primary,
         'border-grey-900 bg-gray-900 text-white': secondary,
         'border-grey-500 bg-green-500 text-white': success,
@@ -27,6 +29,6 @@ export default function Button({
     });
 
     return (
-        <button className={classes}>{children}</button>
+        <button {...rest} onClick={onClick} className={classes}>{children}</button>
     )
 }
