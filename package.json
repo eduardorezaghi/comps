@@ -15,8 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node serve.mjs",
+    "build": "esbuild src/index.js --bundle --outfile=public/assets/app.js --loader:.js=jsx",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "esbuild": "0.19.4",
     "tailwindcss": "^3.3.3"
   }
 }
