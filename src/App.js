@@ -1,24 +1,34 @@
-import Accordion from "./components/Accordion";
+import Dropdown from "./components/Dropdown";
 import React from "react";
-
+import "./index.css";
 
 export default function App() {
-    const items = [
+    const [selected, setSelected] = React.useState(null);
+
+    const onSelectedChange = (selected) => {
+        setSelected(selected);
+    };
+
+    const options = [
         {
-            id: 1,
-            label: 'What is React?',
-            content: 'React is a front end javascript framework'
+            label: "The Color Red",
+            value: "red",
         },
         {
-            id: 2,
-            label: 'Why use React?',
-            content: 'React is a favourite JS library among engineers'
+            label: "The Color Green",
+            value: "green",
         },
         {
-            id: 3,
-            label: 'How do you use React?',
-            content: 'You use React by creating components'
-        }
-    ]
-    return <Accordion items={items} />;
+            label: "A Shade of Blue",
+            value: "blue",
+        },
+    ];
+
+    return (
+        <Dropdown
+            options={options}
+            value={selected}
+            onChange={onSelectedChange}
+        />
+    );
 }

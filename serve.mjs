@@ -6,10 +6,11 @@ let context = await esbuild.context({
     outdir: "public",
     bundle: true,
     sourcemap: 'inline',
-    resolveExtensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".json"],
     loader: {
         ".js": "jsx",
     },
+    resolveExtensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".json"],
+    jsx: 'automatic',
     logLevel: "info",
 });
 

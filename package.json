@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "node serve.mjs",
+    "start-react": "react-scripts start",
     "build": "esbuild src/index.js --bundle --outfile=public/assets/app.js --loader:.js=jsx",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
