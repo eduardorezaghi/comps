@@ -25,10 +25,17 @@ export default function App() {
     ];
 
     return (
-        <Dropdown
-            options={options}
-            value={selected}
-            onChange={onSelectedChange}
-        />
+        <div className="flex" >
+            <Dropdown
+                options={options}
+                value={selected}
+                onChange={onSelectedChange}
+            />
+            <Dropdown
+                options={options}
+                value={selected}
+                onChange={onSelectedChange}
+            />
+        </div>
     );
 }
