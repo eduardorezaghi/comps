@@ -1,6 +1,5 @@
 import Dropdown from "../components/Dropdown";
 import React from "react";
-import "./index.css";
 
 export default function DropdownPage() {
     const [selected, setSelected] = React.useState(null);
