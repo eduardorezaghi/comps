@@ -1,18 +1,20 @@
 import React from "react";
-import Link from "./components/Link";
 import Router from "./components/Router";
 import AccordionPage from "./pages/AccordionPage";
 import DropdownPage from "./pages/DropdownPage";
+import ButtonPage from "./pages/ButtonPage";
+import Sidebar from "./components/Sidebar";
 
 export default function App() {
 
     return (
-        <div>
-            <Link path="/accordion">Go to accordion</Link>
-            <Link path="/dropdown">Go to dropdown</Link>
-            <div>
+        <div className="flex bg-gray-100 min-h-screen w-screen gap-4">
+            <Sidebar />
+            <div className="col-span-9">
+                <Router path="/"><DropdownPage /></Router>
                 <Router path="/accordion"><AccordionPage /></Router>
                 <Router path="/dropdown"><DropdownPage /></Router>
+                <Router path="/buttons"><ButtonPage /></Router>
             </div>
         </div>
     );
