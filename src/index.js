@@ -7,8 +7,6 @@ import { NavigationProvider } from './context/Navigation'
 const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
-new EventSource('/esbuild').addEventListener('change', () => window.location.reload())
-
 root.render(
     <NavigationProvider>
         <App />
