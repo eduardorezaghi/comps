@@ -4,6 +4,7 @@ import AccordionPage from "./pages/AccordionPage";
 import DropdownPage from "./pages/DropdownPage";
 import ButtonPage from "./pages/ButtonPage";
 import Sidebar from "./components/Sidebar";
+import ModalPage from "./pages/ModalPage";
 
 export default function App() {
 
@@ -15,6 +16,7 @@ export default function App() {
                 <Router path="/accordion"><AccordionPage /></Router>
                 <Router path="/dropdown"><DropdownPage /></Router>
                 <Router path="/buttons"><ButtonPage /></Router>
+                <Router path="/modal"><ModalPage /></Router>
             </div>
         </div>
     );

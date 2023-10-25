@@ -6,6 +6,7 @@ export default function Sidebar() {
         { path: "/", label: "Dropdown" },
         { path: "/accordion", label: "Accordion" },
         { path: "/buttons", label: "Buttons" },
+        { path: "/modal", label: "Modal" },
     ];
 
     const classes = classNames("flex", "flex-col", "col-span-2", "bg-white", "p-4", "shadow-lg", "rounded-lg")
