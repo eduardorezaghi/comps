@@ -5,6 +5,7 @@ import DropdownPage from "./pages/DropdownPage";
 import ButtonPage from "./pages/ButtonPage";
 import Sidebar from "./components/Sidebar";
 import ModalPage from "./pages/ModalPage";
+import TablePage from "./pages/TablePage";
 
 export default function App() {
 
@@ -17,6 +18,7 @@ export default function App() {
                 <Router path="/dropdown"><DropdownPage /></Router>
                 <Router path="/buttons"><ButtonPage /></Router>
                 <Router path="/modal"><ModalPage /></Router>
+                <Router path="/table"><TablePage></TablePage></Router>
             </div>
         </div>
     );
